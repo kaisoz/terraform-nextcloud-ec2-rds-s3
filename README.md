@@ -1,8 +1,10 @@
-# terraform-nextcloud-ec2-rds-s3
- 
- Terraform configuration to install the Nextcloud application in AWS along with all its dependencies.
+# Terraform template to install the Nextcloud application in AWS
+
+This Terraform template installs and configures the latest Nextcloud version along with its dependencies. The configuration uses a MySql RDS instance as database and a S3 bucket as datastore.
   
 ## Features
+
+* S3 remote backend
 
 ### Network
 

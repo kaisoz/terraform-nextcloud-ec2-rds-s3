@@ -11,24 +11,6 @@ resource "aws_instance" "nextcloud_app_instance"{
     }
 
     user_data = "${data.template_cloudinit_config.cloudinit-nextcloud.rendered}"
-
-    #user_data = templatefile("${path.module}/scripts/nextcloud_installer.sh", { 
-
-    #                aws_region = var.aws_region,
-
-    #                db_name = var.db_name, 
-    #                db_user = var.db_user, 
-    #                db_pass = var.db_pass, 
-    #                db_endpoint = var.db_endpoint 
-
-    #                admin_user = var.admin_user,
-    #                admin_pass = var.admin_pass,
-    #                data_dir = var.data_dir,
-
-    #                s3_bucket_name = var.s3_bucket_name,
-    #                user_access_key = var.s3_access_key,
-    #                user_secret_key = var.s3_secret_key
-    #            })
 }
 
 resource "aws_security_group" "nextcloud_app_sg" {

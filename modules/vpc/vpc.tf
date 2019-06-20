@@ -8,7 +8,7 @@ resource "aws_vpc" "nextcloud_vpc" {
   }
 }
 
-# Define the public subnet
+# Public subnet
 resource "aws_subnet" "nextcloud_app_subnet" {
   vpc_id = aws_vpc.nextcloud_vpc.id
   cidr_block = var.public_subnet_cidr
@@ -20,7 +20,7 @@ resource "aws_subnet" "nextcloud_app_subnet" {
   }
 }
 
-# Define the private subnet
+# Private subnet
 resource "aws_subnet" "nextcloud_db_subnet" {
   vpc_id = aws_vpc.nextcloud_vpc.id
   cidr_block = var.private_subnet_cidr
@@ -40,7 +40,7 @@ resource "aws_db_subnet_group" "nextcloud_db_subnet_grp" {
   }
 }
 
-# Define the internet gateway
+# Internet gateway
 resource "aws_internet_gateway" "nextcloud_vpc_igw" {
   vpc_id = aws_vpc.nextcloud_vpc.id
 
@@ -49,7 +49,7 @@ resource "aws_internet_gateway" "nextcloud_vpc_igw" {
   }
 }
 
-# Define the route table
+# Route table
 resource "aws_route_table" "nextcloud_rt" {
   vpc_id = aws_vpc.nextcloud_vpc.id
 
@@ -63,7 +63,7 @@ resource "aws_route_table" "nextcloud_rt" {
   }
 }
 
-# Assign the route table to the public Subnet
+# Assign the route table to the public subnet
 resource "aws_route_table_association" "nextcloud_rt_assoc" {
   subnet_id = aws_subnet.nextcloud_app_subnet.id
   route_table_id = aws_route_table.nextcloud_rt.id
