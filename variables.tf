@@ -46,11 +46,11 @@ variable "db_cidr" {
 # Database #
 ############
 variable "db_user" {
-  description = "Database user"
+  description = "Nextcloud database root user"
 }
 
 variable "db_pass" {
-  description = "Database password"
+  description = "Nextcloud database root password"
 }
 
 
@@ -60,7 +60,6 @@ variable "db_pass" {
 
 variable "admin_user" {
   description = "Nextcloud admin user"
-  default = "admin"
 }
 
 variable "admin_pass" {
