@@ -92,4 +92,3 @@ These variables can be changed in the `variables.tf` file.
 * Install Redis service to implement session storage
 * Add ELB health check URL for the Nextcloud application
 * Let's Encrypt SSL certificate for the Nextcloud application
-* 
