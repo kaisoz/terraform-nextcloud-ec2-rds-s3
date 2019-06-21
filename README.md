@@ -59,6 +59,8 @@ Apply the Terraform plan
 terraform apply nextcloud.tfplan
 ```
 
+It takes around **5 minutes** for Nextcloud to be ready to use since Terraform successfully applies the execution plan.
+
 ## Configuration
 
 These variables can be changed in the `variables.tf` file.
