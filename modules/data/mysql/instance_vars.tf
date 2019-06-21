@@ -4,7 +4,7 @@ variable "instance_type" {
 }
 
 variable "vpc_id" {
-  description = "VPC id to assign the db to"
+  description = "VPC id to assign to the db"
 }
 
 variable "subnet_id" {
@@ -12,9 +12,9 @@ variable "subnet_id" {
 }
 
 variable "public_subnet_cidr" {
-  description = "CIDR for the public subnet"
+  description = "CIDR of the public subnet"
 }
 
 variable "subnet_group" {
-  description = "Subnet group to assign the db to"
+  description = "Subnet group to assign to the db"
 }

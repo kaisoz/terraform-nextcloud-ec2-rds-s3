@@ -73,9 +73,9 @@ These variables can be changed in the `variables.tf` file.
 | nextcloud_instance_type | t2.micro | SSH key name to associate to the Nextcloud app instance |
 | nextcloud_key_name | null | SSH key name to associate to the Nextcloud app instance |
 | db_instance_type | db.t2.micro | Database instance type |
-| vpc_cidr | 10.0.0.0/16 | CIDR for the VPC |
-| nextcloud_cidr | 10.0.1.0/24 | CIDR for the public subnet |
-| db_cidr | 10.0.2.0/24 | CIDR for the private subnet |
+| vpc_cidr | 10.0.0.0/16 | CIDR of the VPC |
+| nextcloud_cidr | 10.0.1.0/24 | CIDR of the public subnet |
+| db_cidr | 10.0.2.0/24 | CIDR of the private subnet |
 | s3_bucket_name | nextcloud-datastore | Name of the S3 bucket to use as datastore |
 | force_datastore_destroy | false | Destroy all objects so that the bucket can be destroyed without error. These objects are not recoverable |
 

@@ -1,6 +1,6 @@
 data "aws_caller_identity" "terraform_user" {}
 
-# User with no permissions, by default can do nothing
+# By default, a new IAM user has no permissions, so it can do nothing
 resource "aws_iam_user" "nextcloud-s3" {
   name = "terraform-nextcloud-s3"
 }

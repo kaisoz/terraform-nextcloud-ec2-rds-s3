@@ -11,7 +11,7 @@ variable "subnet_id" {
 }
 
 variable "vpc_id" {
-    description = "Vpc id"
+    description = "Vpc id to assign to this instance"
 }
 
 variable "key_name" {

@@ -1,4 +1,3 @@
-# Database
 variable "db_name" {
   description = "Database name"
   default = "nextcloud_db"

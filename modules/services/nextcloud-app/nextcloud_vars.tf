@@ -7,6 +7,6 @@ variable "admin_pass" {
 }
 
 variable "data_dir" {
-    description =  "Data folder for nextcloud"
+    description =  "Data folder for Nextcloud"
     default = "/var/www/nextcloud/data"
 }

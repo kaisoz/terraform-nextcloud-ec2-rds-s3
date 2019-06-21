@@ -11,7 +11,7 @@ resource "aws_db_instance" "nextcloud_mysql_instance" {
   password             = var.db_pass
 }
 
-# Define the security group for private subnet
+# Security group for private subnet
 resource "aws_security_group" "nextcloud_db_sg"{
   name = "nextcloud db sg"
   description = "Allow traffic from Nextcloud app"

@@ -63,7 +63,6 @@ resource "aws_route_table" "nextcloud_rt" {
   }
 }
 
-# Assign the route table to the public subnet
 resource "aws_route_table_association" "nextcloud_rt_assoc" {
   subnet_id = aws_subnet.nextcloud_app_subnet.id
   route_table_id = aws_route_table.nextcloud_rt.id
